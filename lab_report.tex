@@ -1,0 +1,49 @@
+%% 实验报告主文件
+%% 编译：在 VSCode 中按 Ctrl+Shift+B，
+%%       或执行 latexmk -xelatex lab_report.tex
+
+\documentclass[xits]{BUPTthesis}
+\usepackage{cjkfakebold}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\input{metadata}
+
+\lstset{
+  basicstyle=\ttfamily\zihao{-5},
+  keywordstyle=\color{blue!60!black}\bfseries,
+  commentstyle=\color{gray!70!black},
+  stringstyle=\color{teal!70!black},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  numbersep=8pt,
+  frame=single,
+  breaklines=true,
+  keepspaces=true,
+  tabsize=2,
+}
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\mainmatter
+\include{chapters/ch_intro}
+\include{chapters/ch_environment}
+\include{chapters/ch_principle}
+\include{chapters/ch_procedure}
+\include{chapters/ch_results}
+\include{chapters/ch_concln}
+
+\appendix
+\setappendixformat
+\include{appendix/app_code}
+\unsetappendixformat
+\backmatter
+
+\end{document}

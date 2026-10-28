@@ -1,0 +1,27 @@
+\chapter{实验内容与步骤}
+
+\section{创建数据库与数据表}
+
+\begin{enumerate}
+  \item 启动数据库服务，进入命令行或图形化客户端。
+  \item 创建数据库，并在其中创建学生信息表，具体语句见代码~\ref{lst:ddl}。
+  \item 向表中插入若干条实验数据，用于后续查询验证。
+\end{enumerate}
+
+\lstinputlisting[
+  language=SQL,
+  caption={创建数据库与数据表},
+  label={lst:ddl},
+]{code/example.sql}
+
+\section{执行数据查询}
+
+对建好的数据表依次执行以下操作，并记录每条语句的返回结果：
+
+\begin{enumerate}
+  \item 查询全体学生信息，观察结果集中列的顺序。
+  \item 使用 \verb|WHERE| 条件、聚合函数和 \verb|GROUP BY| 进行分组统计。
+  \item 使用 \verb|JOIN| 关联多张表，验证外键约束的作用。
+\end{enumerate}
+
+每一条查询语句都应记录执行时间、返回行数和结果截图，便于在下一章进行分析。

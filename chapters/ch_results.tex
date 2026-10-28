@@ -1,0 +1,34 @@
+\chapter{实验结果与分析}
+
+\section{运行结果}
+
+建表和查询语句均能正常执行，返回结果与预期一致。
+典型查询结果如图~\cref{fig:result} 和表~\cref{tab:result} 所示。
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}
+    \draw[fill=gray!15] (0,0) rectangle (6,3.5);
+    \node at (3,1.75) {查询结果截图区域};
+  \end{tikzpicture}
+  \caption{查询结果截图示例}\label{fig:result}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{分组统计结果示例}\label{tab:result}
+  \begin{tabular}{ccc}
+    \toprule
+    major & 人数 & 平均分 \\
+    \midrule
+    计算机科学与技术 & 12 & 91.5 \\
+    软件工程 & 10 & 88.3 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{结果分析}
+
+查询结果验证了 \verb|WHERE| 条件、聚合函数和分组语句的执行逻辑。
+在实验中应注意 \verb|NULL| 值的处理方式，以及 \verb|GROUP BY| 后
+选择非分组列时不同数据库对语法限制的差异。

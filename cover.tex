@@ -1,0 +1,65 @@
+\newcommand{\bupt@hide}[1]{#1}
+\newcommand{\makechinesetitle}{%
+  \cleardoublepage
+  \pagestyle{empty}
+  % logo
+  \vspace{0.5cm}
+  \begin{center}
+    \includegraphics[width=11.6cm]{logo/buptname}\par
+    \vspace{0.54cm}
+    \fontsize{26pt}{\baselineskip}\selectfont\CJKfakebold{\heiti
+      \bupt@label@covertitle}\par
+    \vspace{1cm}
+    \includegraphics[width=3.09cm]{logo/buptseal}
+  \end{center}
+  \newlength\bupt@titlewidth
+  % title
+  \vspace{1cm}
+  \begin{center}
+    \zihao{3}
+    \settowidth{\bupt@titlewidth}{\bheiti{\bfseries\heiti\bupt@meta@ctitle}}
+    \setlength{\extrarowheight}{6pt}
+    \setlength{\arrayrulewidth}{0.5bp}
+    \begin{tabular}{@{}l@{}p{16\ccwd}@{}}
+      \CJKfakebold{\heiti\bupt@label@ctitle\bupt@title@sep} & %
+      \parbox[t]{16\ccwd}{%
+        \centering%
+      \rule[-4bp]{16\ccwd}{0.5bp}                             \\[-28.75bp]
+        \bheiti{\bfseries\heiti\bupt@meta@ctitle}%
+      }%
+      \\%
+      \ifdim\bupt@titlewidth>16\ccwd
+        \cline{2-2}
+      \fi
+      \\
+      \CJKfakebold{\heiti\bupt@label@ccourse\bupt@title@sep} & %
+      \parbox[t]{16\ccwd}{%
+        \centering%
+      \rule[-4bp]{16\ccwd}{0.5bp}                             \\[-28.75bp]
+        \bheiti{\bfseries\heiti\bupt@meta@ccourse}%
+      }%
+      \\%
+      \ifdim\bupt@titlewidth>16\ccwd
+        \cline{2-2}
+      \fi
+    \end{tabular}
+  \end{center}
+  \vspace{0.5cm}
+  \begin{center}
+    \zihao{3}
+    \setlength\extrarowheight{5pt}
+    \begin{tabular}{lc}
+      \CJKfakebold{\bupt@label@cauthor}     & \CJKfakebold{\uline{\hfill\bupt@meta@cauthor\hfill}}     \\
+      \CJKfakebold{\bupt@label@cdepartment} & \CJKfakebold{\uline{\hfill\bupt@meta@cdepartment\hfill}} \\
+      \CJKfakebold{\bupt@label@cmajor}      & \CJKfakebold{\uline{\hfill\bupt@meta@cmajor\hfill}}      \\
+      \CJKfakebold{\bupt@label@classid}     & \textbf{\uline{\hfill\bupt@meta@classid\hfill}}          \\
+      \CJKfakebold{\bupt@label@studentid}   & \textbf{\uline{\hfill\bupt@meta@studentid\hfill}}        \\
+      %\CJKfakebold{\bupt@label@csupervisor} & \CJKfakebold{\uline{\hfill\bupt@meta@csupervisor\hfill}} \\
+    \end{tabular}
+  \end{center}
+  \vspace{0.5cm}
+  \begin{center}
+    \zihao{3}
+    \bupt@meta@cdate
+  \end{center}
+}

@@ -1,0 +1,20 @@
+\chapter{实验原理}
+
+\section{关系模型}
+
+关系模型把数据组织为若干张二维表，每张表由行与列构成。
+表的一行称为一个元组，一列称为一个属性；表的主键用于唯一标识一个元组，
+外键用于建立表与表之间的关联。
+
+\section{SQL 语言}
+
+SQL（Structured Query Language）是关系数据库的标准查询语言，主要包括：
+
+\begin{enumerate}
+  \item 数据定义语言（DDL）：创建、修改和删除数据库对象，如 \verb|CREATE TABLE|。
+  \item 数据查询语言（DQL）：使用 \verb|SELECT| 从表中检索数据。
+  \item 数据操纵语言（DML）：使用 \verb|INSERT|、\verb|UPDATE|、\verb|DELETE| 修改数据。
+\end{enumerate}
+
+查询的基本执行顺序为：先确定数据来源，再进行筛选、分组、排序和投影，
+最终返回满足条件的元组集合。
